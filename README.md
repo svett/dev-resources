@@ -1,2 +1,3 @@
-# dev-resources
+#  Development resources
+
 A collection of resources for software engineers and devops
