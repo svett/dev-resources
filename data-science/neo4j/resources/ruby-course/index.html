@@ -1,0 +1,2148 @@
+<!doctype html> <!--[if IE 9]>
+<html class="no-js ie9" lang="en">
+   <![endif]-->
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="shortcut icon" href="http://neo4j.com/wp-content/themes/neo4jweb/favicon.ico"/>
+  <title>Developer: Get started - Neo4j Graph Database</title>
+  <meta name="description"
+        content="This is where you’ll find step-by-step Neo4j tutorials and developer guides that cover all areas of the development life-cycle to help you get started."/>
+  <link rel="canonical" href="http://neo4j.com/developer-resources/get-started/"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:title" content="Developer: Get started - Neo4j Graph Database"/>
+  <meta property="og:description"
+        content="This is where you’ll find step-by-step Neo4j tutorials and developer guides that cover all areas of the development life-cycle to help you get started."/>
+  <meta property="og:url" content="http://neo4j.com/developer-resources/get-started/"/>
+  <meta property="og:site_name" content="Neo4j Graph Database"/>
+  <meta property="og:image"
+        content="http://dev.assets.neo4j.com.s3.amazonaws.com/wp-content/uploads/2014/10/icon-guide-theory.png"/>
+  <link rel="alternate" type="application/rss+xml" title="Neo4j Graph Database &raquo; Feed"
+        href="http://neo4j.com/feed/"/>
+  <link rel="alternate" type="application/rss+xml" title="Neo4j Graph Database &raquo; Comments Feed"
+        href="http://neo4j.com/comments/feed/"/>
+  <link rel='stylesheet' id='font-awesome-four-css'
+        href="http://neo4j.com/wp-content/plugins/font-awesome-4-menus/css/font-awesome.min.css?ver=4.2.0"
+        type='text/css' media='all'/>
+  <link rel='stylesheet' id='foundation-css'
+        href="http://neo4j.com/wp-content/themes/neo4jweb/assets/css/app.css?ver=4.1" type='text/css' media='screen'/>
+  <link rel='stylesheet' id='neo-codemirror-css'
+        href="http://neo4j.com/wp-content/themes/neo4jweb/assets/css/codemirror-neo.css?ver=4.1" type='text/css'
+        media='screen'/>
+  <script type='text/javascript'>
+    /* <![CDATA[ */
+    var ajax_object = {"ajaxurl": "http:\/\/neo4j.com\/wp-admin\/admin-ajax.php"};
+    /* ]]> */
+  </script>
+  <script type='text/javascript'
+          src='http://neo4j.com/wp-content/plugins/neo4j-download/js/download.js?ver=4.1'></script>
+  <script type='text/javascript'
+          src='http://neo4j.com/wp-content/plugins/jquery-updater/js/jquery-2.1.1.min.js?ver=2.1.1'></script>
+  <script type='text/javascript'
+          src='http://neo4j.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+  <script type='text/javascript'
+          src='http://neo4j.com/wp-content/themes/neo4jweb/assets/js/vendor/modernizr.min.js?ver=4.1'></script>
+  <script type='text/javascript'
+          src='http://neo4j.com/wp-content/themes/neo4jweb/assets/js/foundation.min.js?ver=4.1'></script>
+  <script type='text/javascript'
+          src='http://neo4j.com/wp-content/themes/neo4jweb/assets/js/vendor/codemirror.min.js?ver=4.1'></script>
+  <script type='text/javascript'
+          src='http://neo4j.com/wp-content/themes/neo4jweb/assets/js/neo_codemirror.js?ver=4.1'></script>
+  <script type='text/javascript' src='//use.typekit.net/rdt4xku.js?ver=4.1'></script>
+  <script type='text/javascript' src='http://neo4j.com/wp-content/themes/neo4jweb/assets/js/misc.js?ver=4.1'></script>
+  <script type='text/javascript'
+          src='http://neo4j.com/wp-content/themes/neo4jweb/assets/js/neo_calculator_v3.js?ver=4.1'></script>
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://neo4j.com/xmlrpc.php?rsd"/>
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://neo4j.com/wp-includes/wlwmanifest.xml"/>
+  <meta name="generator" content="WordPress 4.1"/>
+  <link rel='shortlink' href="http://neo4j.com/?p=38241"/>
+</head>
+
+<body>
+<div class="top-bar-container contain-to-grid">
+    <nav class="top-bar" data-topbar role="navigation">
+        <ul class="title-area">
+            <li class="name">
+                <h1><a href="http://neo4j.com/"><img
+                        src="http://neo4j.com/wp-content/themes/neo4jweb/assets/images/neo4j-logo-2015.png"/></a></h1>
+            </li>
+            <li class="toggle-topbar menu-icon"><a href="#"></a></li>
+        </ul>
+        <section class="top-bar-section">
+            <ul id="menu-top-nav" class="top-bar-menu right">
+                <li id="menu-item-36917"
+                    class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item active menu-item-36917">
+                    <a href="/developer-resources/get-started">Developer</a></li>
+                <li id="menu-item-38286"
+                    class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-38286">
+                    <a href="http://neo4j.com/blog/">Blog</a></li>
+                <li id="menu-item-38817"
+                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-38817"><a
+                        href="//support.neo4j.com/hc">Support</a></li>
+                <li id="menu-item-36919"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36919"><a
+                        href="http://neo4j.com/contact-us/">Contact Us</a></li>
+                <li id="menu-item-36921"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36921"><a
+                        href="http://neo4j.com/download/">Download Neo4j</a></li>
+            </ul>
+            <ul class="right">
+                <li class="has-form hide-for-small">
+                    <form role="search" method="get" id="searchform" class="searchform" action="http://neo4j.com/">
+                        <input type="text" name="s" id="s"/><input type="image" id="searchsubmit"
+                                                                   src="http://neo4j.com/wp-content/themes/neo4jweb/assets/images/searchicon.png"/>
+                    </form>
+                </li>
+                <li class="header-widget has-dropdown">
+                    <a href="#"><span class="show-for-small-down">Menu</span> </a>
+                    <ul class="sub-menu dropdown">
+                        <div class="row header-widgets-container">
+                            <div class="medium-3 columns">
+                                <div class="menu-product-and-services-container">
+                                    <ul id="menu-product-and-services" class="menu">
+                                        <li id="menu-item-36967"
+                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36967">
+                                            <a href="/product">PRODUCT AND SERVICES</a></li>
+                                        <li id="menu-item-36966"
+                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36966">
+                                            <a href="http://neo4j.com/product">Neo4j Graph Database</a></li>
+                                        <li id="menu-item-38756"
+                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38756">
+                                            <a href="http://neo4j.com/subscriptions/">Subscriptions</a></li>
+                                        <li id="menu-item-36971"
+                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36971">
+                                            <a href="http://neo4j.com/neo4j-editions/">Compare Neo4j Editions</a></li>
+                                        <li id="menu-item-36974"
+                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36974">
+                                            <a href="http://neo4j.com/professional-services/">Professional Services</a>
+                                        </li>
+                                        <li id="menu-item-38293"
+                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38293">
+                                            <a href="http://neo4j.com/open-source-project/">Open Source Project</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menu-partners-container">
+                                    <ul id="menu-partners" class="menu">
+                                        <li id="menu-item-36965"
+                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36965">
+                                            <a href="http://neo4j.com/partners/">PARTNER PROGRAM</a></li>
+                                        <li id="menu-item-36963"
+                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36963">
+                                            <a href="http://neo4j.com/neo4j-partner-program/">Become a Partner</a></li>
+                                        <li id="menu-item-38558"
+                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-38558">
+                                            <a href="/partners/#find">Find a Partner</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="medium-3 columns">
+                                <div class="menu-customers-container">
+                                    <ul id="menu-customers" class="menu">
+                                        <li id="menu-item-36955"
+                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36955">
+                                            <a href="http://neo4j.com/customers/">CUSTOMERS</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menu-use-cases-container">
+                                    <ul id="menu-use-cases" class="menu">
+                                        <li id="menu-item-38559"
+                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38559">
+                                            <a href="http://neo4j.com/use-cases/">USE CASES</a></li>
+                                        <li id="menu-item-38548"
+                                            class="menu-item menu-item-type-post_type menu-item-object-use_case menu-item-38548">
+                                            <a href="http://neo4j.com/use-cases/network-and-data-center-management/">Network
+                                                &#038; IT Operations Mgmt</a></li>
+                                        <li id="menu-item-38551"
+                                            class="menu-item menu-item-type-post_type menu-item-object-use_case menu-item-38551">
+                                            <a href="http://neo4j.com/use-cases/master-data-management/">Master Data
+                                                Management</a></li>
+                                        <li id="menu-item-38552"
+                                            class="menu-item menu-item-type-post_type menu-item-object-use_case menu-item-38552">
+                                            <a href="http://neo4j.com/use-cases/recommendations/">Recommendations</a>
+                                        </li>
+                                        <li id="menu-item-38550"
+                                            class="menu-item menu-item-type-post_type menu-item-object-use_case menu-item-38550">
+                                            <a href="http://neo4j.com/use-cases/social/">Social Network</a></li>
+                                        <li id="menu-item-38547"
+                                            class="menu-item menu-item-type-post_type menu-item-object-use_case menu-item-38547">
+                                            <a href="http://neo4j.com/use-cases/identity-and-access-management/">Identity
+                                                and Access Mgmt</a></li>
+                                        <li id="menu-item-38549"
+                                            class="menu-item menu-item-type-post_type menu-item-object-use_case menu-item-38549">
+                                            <a href="http://neo4j.com/use-cases/digital-asset-management/">Digital Asset
+                                                Management</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="medium-3 columns">
+                                <div class="menu-graphacademy-container">
+                                    <ul id="menu-graphacademy" class="menu">
+                                        <li id="menu-item-36957"
+                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36957">
+                                            <a href="http://neo4j.com/graphacademy/">GRAPHACADEMY</a></li>
+                                        <li id="menu-item-36959"
+                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36959">
+                                            <a href="http://neo4j.com/graphacademy/online-course/">Online Training</a>
+                                        </li>
+                                        <li id="menu-item-39349"
+                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-39349">
+                                            <a href="/books/">Books</a></li>
+                                        <li id="menu-item-38761"
+                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38761">
+                                            <a href="http://neo4j.com/resources/">Resources</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menu-developer-container">
+                                    <ul id="menu-developer" class="menu">
+                                        <li id="menu-item-38292"
+                                            class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-38292">
+                                            <a href="/developer-resources/get-started">DEVELOPER</a></li>
+                                        <li id="menu-item-39699"
+                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-39699">
+                                            <a href="/docs">Docs</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menu-community-4-container">
+                                    <ul id="menu-community-4" class="menu">
+                                        <li id="menu-item-38291"
+                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38291">
+                                            <a href="http://neo4j.com/community/">COMMUNITY</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="medium-3 columns">
+                                <div class="menu-neo4j-blog-container">
+                                    <ul id="menu-neo4j-blog" class="menu">
+                                        <li id="menu-item-38289"
+                                            class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-38289">
+                                            <a href="http://neo4j.com/blog/">Neo4j Blog</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menu-events-container">
+                                    <ul id="menu-events" class="menu">
+                                        <li id="menu-item-36956"
+                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36956">
+                                            <a href="http://neo4j.com/events/">EVENTS</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menu-about-us-container">
+                                    <ul id="menu-about-us" class="menu">
+                                        <li id="menu-item-38561"
+                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38561">
+                                            <a href="http://neo4j.com/company/">COMPANY</a></li>
+                                        <li id="menu-item-36950"
+                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36950">
+                                            <a href="http://neo4j.com/news">News</a></li>
+                                        <li id="menu-item-36951"
+                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36951">
+                                            <a href="http://neo4j.com/jobs">Jobs</a></li>
+                                        <li id="menu-item-38563"
+                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38563">
+                                            <a href="http://neo4j.com/staff/">Staff</a></li>
+                                        <li id="menu-item-38288"
+                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38288">
+                                            <a href="http://neo4j.com/contact-us/">Contact Us</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </nav>
+</div>
+
+<div class="marquee blue">
+    <div class="row text-center">
+        <div class="medium-10 small-centered columns">
+            <h1 class="entry-title">Getting Started with Neo4j and Ruby</h1>
+        </div>
+    </div>
+</div>
+<article id="content" role="main">
+    <p class="lead">lead text</p>
+    <section class="row">
+        <div style="padding-left: 1em; padding-right: 1em;">
+            <div class="row" style="padding-top: 10px;">
+                <div class="columns large-12" style="padding-top:10px;">
+                    <ul class="breadcrumbs">
+                        <li><a href="/developer-resources">Developer Guides</a></li>
+                        
+                        <li class="current"><a href="#">Getting Started with Neo4j and Ruby</a></li>
+                    </ul>
+                </div>
+            </div>
+            <style> .lead {
+    display: none;
+}
+
+section.row {
+    padding: 0;
+}
+
+ol li {
+    padding: 0;
+    margin: 0;
+}
+
+#content section.row {
+    max-width: 1024px;
+    padding-left: .5em;
+    padding-right: .5em;
+}
+
+.row {
+}
+
+#content section.row .accordion-navigation > a {
+    padding: 0 !important;
+}
+
+.accordion .content {
+    padding: 0;
+}
+
+.row .row {
+    margin: auto;
+}
+
+.columns.medium-12 {
+    padding-left: 0;
+}
+
+.fa-stack.fa-lg {
+    color: #0f5788;
+    display: block;
+    float: left;
+    height: 70px;
+    margin-right: 1em;
+    padding-right: 2em;
+    width: 50px;
+}
+
+h3 {
+    font-weight: normal;
+}
+
+strong, b {
+    font-weight: 600;
+    font-color: #333;
+}
+
+.calloutsection {
+    padding: 20px 0;
+}
+
+section {
+    padding: 40px 0 0 0;
+}
+
+.marquee {
+    height: auto;
+    margin-top: 1em;
+}
+
+#main-content .entry-title {
+    display: none;
+}
+
+#main-content .subheader {
+    display: none;
+}
+
+.marquee h1, .marquee h2 {
+    padding-top: 0;
+}
+
+#main-content .next-steps h5 {
+    font-size: 12px;
+}
+
+#main-content .next-steps h3 {
+    margin-bottom: 1em;
+}
+
+#main-content .content.active {
+    display: block;
+}
+
+#main-content .content {
+    display: none;
+}
+
+#main-content {
+    padding-top: 0;
+}
+
+.use-case .tab-container .content.active {
+    border-top: 1px solid rgba(15, 87, 136, 0.7);
+    padding: 2em 1em 1em;
+}
+
+.tabs dd > a:hover {
+    color: #3d5360;
+}
+
+.breadcrumbs > * a, .breadcrumbs > * span {
+    color: #0f5788;
+    text-transform: none;
+}
+
+.breadcrumbs > * {
+    text-transform: none;
+}
+
+.top-bar {
+    height: 80px;
+}
+
+#main-content .top-bar-section ul {
+    margin-top: 1em;
+}
+
+.panel-pod p {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 26px;
+}
+
+.panel-pod > a {
+    display: block;
+    margin-bottom: 1em;
+}
+
+.panel-pod p a {
+    display: block;
+    margin-top: 1em;
+}
+
+.panel-pod {
+    text-align: left;
+}
+
+.tab-container {
+    margin-bottom: 2em;
+}
+
+.panel-pod img {
+    display: block;
+    margin: auto;
+}
+
+#content h4 {
+    font-weight: 100;
+    color: #0f5788;
+    font-size:1.2em;
+}
+
+#content h3 {
+    font-weight: 100;
+    color: #0f5788;
+    font-size:1.5em;
+}
+
+#content ul {
+    list-style: circle outside none;
+}
+
+#content .guide-section-content .large-12.columns > ul {
+    list-style: circle outside none !important;
+    margin-left: 1em !important;
+}
+
+.breadcrumbs > *:before {
+    content: "→";
+    color: #aaa;
+    margin: 0 0.75rem;
+    position: relative;
+    top: 0;
+}
+
+#content section.row .accordion-navigation > a {
+    background: url("http://dev.assets.neo4j.com.s3.amazonaws.com/wp-content/uploads/collapse.png") no-repeat scroll 100% 50% transparent;
+    border-bottom: 1px dashed #ddd;
+    padding: 0 !important;
+}
+
+.accordion-navigation.active > a {
+    background: url("http://dev.assets.neo4j.com.s3.amazonaws.com/wp-content/uploads/roll-up.png") no-repeat scroll 100% 50% transparent !important;
+}
+
+.accordion-navigation h5 {
+    font-weight: 100;
+    height: 2em;
+    line-height: 2em;
+    margin: 0;
+}
+
+.content ul {
+    margin-top: 1em;
+}
+
+img.icon {
+    height: 1.4em;
+    width: auto;
+    margin-right: 0.25em;
+}
+
+.accordion ul {
+    list-style: circle outside none !important;
+    margin-left: 1.5em !important;
+}
+
+.accordion h5 {
+    color: #0f5788;
+    padding-left: .5em;
+}
+
+.accordion .active h5 {
+    background: url("http://dev.assets.neo4j.com.s3.amazonaws.com/wp-content/uploads/roll-up.png") no-repeat scroll 100% 50% #f9f9f9 !important;
+    color: #555;
+    font-weight: 300;
+}
+
+#content code {
+    font-weight:bold;
+}
+
+#content h3 {
+    margin-bottom:.5em
+}
+
+#content h5 {
+    font-weight:100
+}
+
+#content h4 {
+    font-weight:100
+}
+
+#content strong {
+    font-weight:400
+}
+
+#content h4 {
+    margin-bottom:1em
+}
+
+#content .title {
+    font-size:20px
+}
+
+#content .breadcrumbs {
+    margin-bottom:1.25rem;
+}
+
+ul.breadcrumbs {
+    margin-left: 0px;
+    list-style: none !important;
+}
+
+.marquee h1, .marquee h2 {
+    padding-top: 0;
+}
+
+.marquee {
+    height: auto;
+    margin-top: 1em;
+}
+div.side-nav {
+    clear: right;
+    float: right;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    width: 5em;
+    padding: 1em;
+    min-width: 16em;
+    border: 1px solid rgb(222, 222, 222);
+    height:auto;
+    position: absolute;
+    right: -20em;
+}
+
+span.label {
+	top: -3px; margin-right: 5px;
+}
+.bgblue {
+	background-color: #0f5788;
+}
+.bgorange {
+	background-color: #f58220;
+}
+hr {
+	margin-top: 0.5rem;
+}
+td.tableblock, td p.tableblock,th.tableblock, th p.tableblock {
+	margin-bottom: 0px;
+	line-height: 1em;
+}
+th.tableblock, th p.tableblock {
+	font-weight:bold;
+}
+</style>
+
+            <div>
+                <div class="row" style="padding-left: 0; padding-right: 0;">
+                    <div class="large-9 large-push-3 columns guide-section-content">
+                        <div id="preamble columns medium-12">
+<div class="sectionbody">
+<div class="openblock pull-right">
+<div class="content">
+<div class="toc">
+<h3 class="title">Overview</h3>
+
+<ul class="sectlevel2">
+<li><a href="#_why_neo4j">Why Neo4j?</a></li>
+<li><a href="#_introduction_to_neo4j">Introduction to Neo4j</a>
+<ul class="sectlevel3">
+<li><a href="#_cypher">Cypher</a></li>
+<li><a href="#_neo4j_in_ruby">Neo4j in Ruby</a></li>
+</ul>
+</li>
+<li><a href="#_setup">Setup</a></li>
+<li><a href="#_the_fun_stuff">The Fun Stuff</a>
+<ul class="sectlevel3">
+<li><a href="#_eager_loading">Eager Loading</a></li>
+<li><a href="#_recommendations">Recommendations</a></li>
+</ul>
+</li>
+<li><a href="#_doing_more">Doing More</a>
+<ul class="sectlevel3">
+<li><a href="#_an_example_sinatra_application">An example Sinatra application</a></li>
+<li><a href="#_the_asset_portal_application">The asset_portal application</a></li>
+<li><a href="#_getting_help">Getting Help</a></li>
+<li><a href="#_more_screencasts">More Screencasts</a></li>
+<li><a href="#_integrations_with_other_gems">Integrations with other gems</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+<hr>
+</div>
+</div>
+<style>
+  pre.code {
+    white-space: pre-wrap;
+  }
+</style>
+<script type='text/javascript' src='/developer-resources/ruby/codemirror_ruby.js'></script>
+<script type='text/javascript' src='/developer-resources/ruby/codemirror_multiplex.js'></script>
+<script type='text/javascript' src='/developer-resources/ruby/codemirror_htmlembedded.js'></script>
+<script>
+CodeMirror.colorize = (function() {
+    var isBlock = /^(p|li|div|h\\d|pre|blockquote|td)$/;
+
+    function textContent(node, out) {
+        if (node.nodeType == 3) return out.push(node.nodeValue);
+        for (var ch = node.firstChild; ch; ch = ch.nextSibling) {
+            textContent(ch, out);
+            if (isBlock.test(node.nodeType)) out.push("\n");
+        }
+    }
+
+    return function() {
+        var collection = document.body.getElementsByTagName("pre");
+
+        for (var i = 0; i < collection.length; ++i) {
+            var theme = " cm-s-default";
+            var node = collection[i];
+            var mode = node.getAttribute("data-lang");
+            if (!mode) continue;
+            if (mode === "cypher") {
+                theme = " cm-s-neo";
+            } else if (mode === "java") {
+                mode = "text/x-java";
+            } else if (mode === "erb") {
+                mode = "application/x-erb";
+            } else if (mode === "sql") {
+                mode = "text/x-sql";
+            }
+
+            var text = [];
+            textContent(node, text);
+            node.innerHTML = "";
+            CodeMirror.runMode(text.join(""), mode, node);
+
+            node.className += theme;
+        }
+    };
+})();
+</script>
+<img src="./screencast_screenshot.png" style="width: 59%; border: 1px solid black; border-radius: 0.5em; margin-bottom: 1em" />
+<div class="quoteblock abstract">
+<div class="title">Goals</div>
+<blockquote style="padding-left: 0;">
+This course provides an overview on everything that you need to build a Neo4j application with the <a href="https://www.ruby-lang.org">Ruby programming language</a>.  Ruby on Rails and Sinatra examples are given but any web framework (or lack thereof) can be used.
+</blockquote>
+</div>
+<div class="quoteblock abstract">
+<div class="title">Prerequisites</div>
+<blockquote style="padding-left: 0;">
+You should have Ruby installed on your system.  Some experience with Ruby and/or Rails is suggested.
+</blockquote>
+</div>
+
+
+<div class="paragraph">
+<p>Let&#8217;s say you would like to write a web application to track entities for yourself or your organization.  Being a good <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">DRY</a> programmer you might decide that what you want is an <em>asset portal</em>: an application which gives you an GUI for browsing and editing entities while also making it easy to define new assets.  This guide will show you how you might start creating such an application using Ruby on Rails and Neo4j.</p>
+</div>
+
+</div>
+</div>
+<div  id="_why_neo4j" class="sect2 columns medium-12" style='padding-left: 0;' >
+<h3>Why Neo4j?</h3>
+
+
+<div class="paragraph">
+<p>Neo4j is the world&#8217;s most popular <em>graph database</em>.  This offers a number of advantages:</p>
+</div>
+
+<div class="ulist">
+<ul>
+<li>
+Neo4j provides a schemaless representation of both entities and relationships between entities.
+</li>
+<li>
+Relationships between entities are <strong>traversed</strong> rather than <strong>joined</strong>.  Traversals explore the local subgraph meaning that query times stay the same as your database grows.
+</li>
+<li>
+Because of the traversal paradigm we think in terms of the complex relationships in our data without worrying as much how to model it
+</li>
+</ul>
+</div>
+
+
+<div class="paragraph">
+<p>Rubyists generally prefer tools which are developer friendly and which don&#8217;t bother you with details until it&#8217;s neccessary.
+Neo4j makes it easy to create nodes and relationships in whatever way seems most natural, but you can also change the structure of your database with a query.</p>
+</div>
+
+</div>
+<div  id="_introduction_to_neo4j" class="sect2 columns medium-12" style='padding-left: 0;' >
+<h3>Introduction to Neo4j</h3>
+
+
+<div class="paragraph">
+<p>Connected information is everywhere in our world.
+Neo4j was built to efficiently store, handle, and query highly connected elements in your data model.
+With a powerful and flexible data model you can represent your real-world, variably structured information without a loss of fidelity.
+The property graph model is easy to understand and handle, especially for object oriented and relational developers.</p>
+</div>
+
+<div class="openblock pull-right">
+<div class="content">
+<div class="imageblock">
+<p class="content">
+<img src="./simple_graph.png" alt="simple graph">
+</p>
+</div>
+</div>
+</div>
+
+
+<div class="paragraph">
+<p>The property graph model consists of:</p>
+</div>
+
+
+
+<div class="paragraph">
+<p><strong>Nodes</strong> which have:</p>
+</div>
+
+<div class="ulist">
+<ul>
+<li>
+<em>properties</em>: schemaless key/value pairs
+</li>
+<li>
+<em>labels</em>: describe and group nodes much like tables group rows, but nodes can have multiple labels
+</li>
+</ul>
+</div>
+
+
+<div class="paragraph">
+<p><strong>Relationships</strong> which connect two nodes directionally have:</p>
+</div>
+
+<div class="ulist">
+<ul>
+<li>
+<em>properties</em>: schemaless key/value pairs
+</li>
+<li>
+A <em>type</em>: gives a description of how it connects the two nodes
+</li>
+</ul>
+</div>
+
+
+<div class="paragraph">
+<p>While relationships are directional, querying relationships in either direction has no associated performance cost.</p>
+</div>
+
+<div  id="_cypher" class="sect3 "  >
+<h4>Cypher</h4>
+
+
+<div class="paragraph">
+<p>Cypher is Neo4j&#8217;s built-in query language.  Cypher queries look like:</p>
+</div>
+
+<div class="listingblock">
+<div class="content code-panel" style="width: 100%; height: auto; border: medium 1px;">
+<pre style="font-size: 16px; font-weight: 100;"  class="code programlisting cm-s-neo" data-lang="cypher"><code>MATCH (p:Person)-[:LIKES]-&gt;(f:Fruit)
+RETURN p, f.name</code></pre>
+</div>
+</div>
+
+
+<div class="paragraph">
+<p>The <strong>MATCH</strong> clause is the most common starting point for Cypher queries.  It defines a pattern for which to search and returns one result per match.  For example we might get the following two matches:</p>
+</div>
+
+
+
+<div class="paragraph">
+<p><span class="image"><img src="./cypher_match_1.png" alt="cypher_match_1" width="49%"></span>
+<span class="image"><img src="./cypher_match_2.png" alt="cypher_match_2" width="49%"></span></p>
+</div>
+
+
+
+<div class="paragraph">
+<p>With the <strong>RETURN</strong> clause we would end up returning a table such as:</p>
+</div>
+
+<table class="tableblock frame-all grid-all" style="width: 99%;">
+<caption class="title">Table 1. Result of Cypher query</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">p</th>
+<th class="tableblock halign-left valign-top">f.name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{name: "Denise"}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"Mango"</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{name: "Denise"}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"Banana"</p></td>
+</tr>
+</tbody>
+</table>
+
+
+<div class="paragraph">
+<p>Here you see we can return entire entities in our database rather than just properties.  This might be returned as a <code>Hash</code> in Ruby, though by default in the Neo4j.rb gems these are wrapped in an object.</p>
+</div>
+
+
+
+<div class="paragraph">
+<p>This is very handy, but it would also be nice to avoid the duplication of our <code>Person</code> node.  You can perform the same match but instead use the <code>collect</code> function to aggregate the values:</p>
+</div>
+
+<div class="listingblock">
+<div class="content code-panel" style="width: 100%; height: auto; border: medium 1px;">
+<pre style="font-size: 16px; font-weight: 100;"  class="code programlisting cm-s-neo" data-lang="cypher"><code>MATCH (p:Person)-[:LIKES]-&gt;(f:Fruit)
+RETURN p, collect(f.name)</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 99%;">
+<caption class="title">Table 2. Result of Cypher aggregation query</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">p</th>
+<th class="tableblock halign-left valign-top">f.name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{name: "Denise"}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">["Mango", "Banana"]</p></td>
+</tr>
+</tbody>
+</table>
+
+
+<div class="paragraph">
+<p>While it&#8217;s possible to get started using the Neo4j.rb without learning Cypher, it is a very powerful way to query a Neo4j database and is worth learning.
+Also since the Neo4j.rb project works by making Cypher queries to Neo4j it is good to understand Cypher as your queries get more complex.
+There is a <a href="/developer-resources/cypher">Cypher tutorial</a> if you would like to learn more.</p>
+</div>
+
+</div>
+<div  id="_neo4j_in_ruby" class="sect3 "  >
+<h4>Neo4j in Ruby</h4>
+
+
+<div class="paragraph">
+<p>For this guide we will be using the Neo4j.rb project.  The project consists of the following gems:</p>
+</div>
+
+
+
+<div class="paragraph">
+<p>Unresolved directive in ruby-course.adoc - include::../ruby.adoc[tags=neo4jrb-gems]</p>
+</div>
+
+
+
+<div class="paragraph">
+<p>Specifically in this guide we will be using the <code>ActiveNode</code> and <code>ActiveRel</code> modules from the <code>neo4j</code> gem to model nodes and relationships from our database.</p>
+</div>
+
+</div>
+</div>
+<div  id="_setup" class="sect2 columns medium-12" style='padding-left: 0;' >
+<h3>Setup</h3>
+
+
+<div class="paragraph">
+<p>The following example is in Ruby on Rails, but there is a <a href="#_an_example_sinatra_application">Sinatra example</a> below.</p>
+</div>
+
+
+
+<div class="paragraph">
+<p>Here we describe how to create a fresh Rails application with Neo4j as the database.  If you have an existing Rails application you can refer to the <a href="http://neo4jrb.readthedocs.org/en/5.2.x/Setup.html#adding-the-gem-to-an-existing-project">Neo4j.rb documentation</a>.</p>
+</div>
+
+
+
+<div class="paragraph">
+<p>Here is how you would setup your asset portal Rails app:</p>
+</div>
+
+<div class="listingblock">
+<div class="content code-panel" style="width: 100%; height: auto; border: medium 1px;">
+<pre style="font-size: 16px; font-weight: 100;"  class="code programlisting cm-s-neo" data-lang="bash"><code>rails new asset_portal -m http://neo4jrb.io/neo4j/neo4j.rb -O
+cd asset_portal
+rake neo4j:install[community-latest]
+rake neo4j:start</code></pre>
+</div>
+</div>
+
+
+<div class="paragraph">
+<p>What do these commands do?</p>
+</div>
+
+
+
+<div class="paragraph">
+<p>The first creates a new Rails app skipping <code>ActiveRecord</code> (the <code>-O</code> flag) and setting up Neo4j.rb in your project (the <code>-m</code> flag).  Then we change into our directory and install the latest version of the community edition of Neo4j into our app directory (into <code>db/neo4j/development/</code>).  Last we start up our copy of Neo4j.</p>
+</div>
+
+
+
+<div class="paragraph">
+<p>Next you should open up your <code>config/application.rb</code> file and find the <code>config.neo4j.<strong></code> lines.  Here you have a choice between *embedded</strong> and <strong>server</strong> modes:</p>
+</div>
+
+<div class="ulist">
+<ul>
+<li>
+Server mode allows you to connect to Neo4j via it&#8217;s HTTP JSON APIs.
+</li>
+<li>
+Embedded mode requires JRuby and allows you to run Neo4j as part of your JRuby process.  This gives you access to the <a href="http://neo4j.com/docs/stable/javadocs/">Neo4j Java APIs</a> directly.
+</li>
+</ul>
+</div>
+
+
+<div class="paragraph">
+<p>By default you will be configured to Neo4j in server mode on the default port (7474).  If you would like something other than the default console the <a href="http://neo4jrb.readthedocs.org/en/5.2.x/Setup.html#rails-configuration">documentation</a>.</p>
+</div>
+
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<div class="title label">Warning</div>
+</td>
+<td class="content">
+By default the <code>rake neo4j:install</code> command disables Neo4j&#8217;s authentication.  It is suggested that you enable the authentication for any exposed Neo4j instances.
+</td>
+</tr>
+</table>
+</div>
+
+
+<div class="paragraph">
+<p>To see an example of setting up Neo4j in Rails check out this short screencast.</p>
+</div>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/n0P0pOP34Mw?rel=0" frameborder="0" allowfullscreen></iframe>
+
+
+<div class="paragraph">
+<p>In this guide we&#8217;ll be setting up different <code>ActiveNode</code> models which will serve as assets.  This is a textbook example of where we can use class inheritance in Neo4j.rb.  First we create some basic models:</p>
+</div>
+
+<div class="listingblock">
+<div class="content code-panel" style="width: 100%; height: auto; border: medium 1px;">
+<pre style="font-size: 16px; font-weight: 100;"  class="code programlisting cm-s-neo" data-lang="bash"><code>rails generate scaffold User name:string email:string
+rails generate scaffold Category name:string
+rails generate scaffold Asset title:string</code></pre>
+</div>
+</div>
+
+
+<div class="paragraph">
+<p>This will generate <a href="http://guides.rubyonrails.org/command_line.html#rails-generate">scaffolds</a> just like any Rails application with the exception that the models will be <code>ActiveNode</code> models rather than <code>ActiveRecord</code> models and will look like this:</p>
+</div>
+
+<div class="listingblock">
+<div class="title">app/models/user.rb</div>
+<div class="content code-panel" style="width: 100%; height: auto; border: medium 1px;">
+<pre style="font-size: 16px; font-weight: 100;"  class="code programlisting cm-s-neo" data-lang="ruby"><code>class User
+  include Neo4j::ActiveNode
+  property :name, type: String
+  property :email, type: String
+end</code></pre>
+</div>
+</div>
+
+
+<div class="paragraph">
+<p>Since Neo4j is schemaless we need to define our properties in our model.</p>
+</div>
+
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title label">Note</div>
+</td>
+<td class="content">
+By default there will be a <code>uuid</code> property created on our model.  If you would like to define your own unique identifier you can use the <code>id_property</code> method.  Either can be accessed or changed via the <code>#id</code> and <code>#id=</code> methods.
+</td>
+</tr>
+</table>
+</div>
+
+
+<div class="paragraph">
+<p>To learn more about properties check out this short screencast.</p>
+</div>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2pCSQkHkPC8?rel=0" frameborder="0" allowfullscreen></iframe>
+
+
+<div class="paragraph">
+<p>Once we&#8217;ve set up those models we can define our asset models like so:</p>
+</div>
+
+<div class="listingblock">
+<div class="content code-panel" style="width: 100%; height: auto; border: medium 1px;">
+<pre style="font-size: 16px; font-weight: 100;"  class="code programlisting cm-s-neo" data-lang="bash"><code>rails generate scaffold Book isbn:string title:string year_published:integer author:references category:references</code></pre>
+</div>
+</div>
+
+
+<div class="paragraph">
+<p>That should generate a model which looks like this:</p>
+</div>
+
+<div class="listingblock">
+<div class="title">app/models/book.rb</div>
+<div class="content code-panel" style="width: 100%; height: auto; border: medium 1px;">
+<pre style="font-size: 16px; font-weight: 100;"  class="code programlisting cm-s-neo" data-lang="ruby"><code>class Book
+  include Neo4j::ActiveNode
+  property :isbn, type: String
+  property :title, type: String
+  property :year_published, type: Integer
+
+  has_one :in_or_out_or_both, :author, type: :FILL_IN_RELATIONSHIP_TYPE_HERE
+  has_one :in_or_out_or_both, :category, type: :FILL_IN_RELATIONSHIP_TYPE_HERE
+
+end</code></pre>
+</div>
+</div>
+
+
+<div class="paragraph">
+<p>You should change that to look like the following (note the <code>Asset</code> superclass definition):</p>
+</div>
+
+<div class="listingblock">
+<div class="title">app/models/book.rb</div>
+<div class="content code-panel" style="width: 100%; height: auto; border: medium 1px;">
+<pre style="font-size: 16px; font-weight: 100;"  class="code programlisting cm-s-neo" data-lang="ruby"><code>class Book &lt; Asset
+  id_property :isbn
+  property :year_published, type: Integer
+
+  has_one :in, :author, type: :CREATED, model_class: :User
+  has_one :out, :category, type: :HAS_CATEGORY
+end</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title label">Note</div>
+</td>
+<td class="content">
+You can remove the <code>title</code> property because it is inherited from the <code>Asset</code> model.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title label">Note</div>
+</td>
+<td class="content">
+We need to specify our Neo4j relationship directions and types here.  Additionally since <code>author</code> isn&#8217;t enough for <code>ActiveNode</code> to understand that we want to reference users, we specify a <code>model_class</code> option.
+</td>
+</tr>
+</table>
+</div>
+
+
+<div class="paragraph">
+<p>By inheriting from <code>Asset</code> our <code>Book</code> model will create nodes with two labels (<code>Book</code> and <code>Asset</code>).  Likewise when you query for nodes via the <code>Book</code> model it will only find nodes which have both labels.</p>
+</div>
+
+
+
+<div class="paragraph">
+<p>Lastly we just need to make a couple of small fixes.  Change these lines to get the names of book authors and categories:</p>
+</div>
+
+<div class="listingblock">
+<div class="title">app/views/books/index.html.erb</div>
+<div class="content code-panel" style="width: 100%; height: auto; border: medium 1px;">
+<pre style="font-size: 16px; font-weight: 100;"  class="code programlisting cm-s-neo" data-lang="erb"><code>&lt;td&gt;&lt;%= book.author.try(:name) %&gt;&lt;/td&gt;
+&lt;td&gt;&lt;%= book.category.try(:name) %&gt;&lt;/td&gt;</code></pre>
+</div>
+</div>
+
+
+<div class="paragraph">
+<p>And change these lines to be able to choose the author when creating or editing books:</p>
+</div>
+
+<div class="listingblock">
+<div class="title">app/views/books/_form.html.erb</div>
+<div class="content code-panel" style="width: 100%; height: auto; border: medium 1px;">
+<pre style="font-size: 16px; font-weight: 100;"  class="code programlisting cm-s-neo" data-lang="erb"><code>&lt;div class="field"&gt;
+  &lt;%= f.label :author %&gt;&lt;br&gt;
+  &lt;%= f.select :author, options_from_collection_for_select(User.all, :id, :name, @book.author.try(:id)), include_blank: true %&gt;
+&lt;/div&gt;
+&lt;div class="field"&gt;
+  &lt;%= f.label :category %&gt;&lt;br&gt;
+  &lt;%= f.select :category, options_from_collection_for_select(Category.order(:name), :id, :name, @book.category.try(:id)), include_blank: true %&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+
+
+<div class="paragraph">
+<p>And so that you can set your associations, change the <code>book_params</code> method in the <code>BooksController</code> to remove the <code>_id</code>:</p>
+</div>
+
+<div class="listingblock">
+<div class="title">app/controllers/books_controller.rb</div>
+<div class="content code-panel" style="width: 100%; height: auto; border: medium 1px;">
+<pre style="font-size: 16px; font-weight: 100;"  class="code programlisting cm-s-neo" data-lang="ruby"><code>def book_params
+  params.require(:book).permit(:isbn, :title, :year_published, :author, :category)
+end</code></pre>
+</div>
+</div>
+
+
+<div class="paragraph">
+<p>Now that we&#8217;ve created our scaffolding let&#8217;s start up our Rails server:</p>
+</div>
+
+<div class="listingblock">
+<div class="content code-panel" style="width: 100%; height: auto; border: medium 1px;">
+<pre style="font-size: 16px; font-weight: 100;"  class="code programlisting cm-s-neo" data-lang="bash"><code>rails s
+open http://localhost:3000/books</code></pre>
+</div>
+</div>
+
+
+<div class="paragraph">
+<p>From there you can create, update, browse, and delete books via the scaffolding.  You can visit <code>/books</code>, <code>/users</code>, and <code>/categories</code> to get entry points into the various sections.</p>
+</div>
+
+</div>
+<div  id="_the_fun_stuff" class="sect2 columns medium-12" style='padding-left: 0;' >
+<h3>The Fun Stuff</h3>
+
+
+<div class="paragraph">
+<p>If you just wanted to do simple CRUD operations there are plenty of other databases to choose from.  How can we do something a bit more fun using the power of Neo4j?</p>
+</div>
+
+<div  id="_eager_loading" class="sect3 "  >
+<h4>Eager Loading</h4>
+
+
+<div class="paragraph">
+<p>First let&#8217;s look at a performance improvement which isn&#8217;t available from <code>ActiveRecord</code>.  When you go to your list of books you should see something like this in your log:</p>
+</div>
+
+<div class="listingblock">
+<div class="title">log/development.log</div>
+<div class="content code-panel" style="width: 100%; height: auto; border: medium 1px;">
+<pre style="font-size: 16px; font-weight: 100;"  class="code programlisting cm-s-neo" data-lang="log"><code>Started GET "/books" for ::1 at 2015-09-30 17:34:03 +1300
+Processing by BooksController#index as HTML
+ CYPHER 4ms MATCH (n:`Book`:`Asset`) RETURN n
+
+ Book#author 4ms MATCH (previous:`Book`:`Asset`) WHERE (ID(previous) IN {ID_previous}) OPTIONAL MATCH previous&lt;-[rel1:`CREATED`]-(next:`User`) RETURN ID(previous), collect(next) | {:ID_previous=&gt;[2, 5, 9, 10]}
+
+ Book#category 3ms MATCH (previous:`Book`:`Asset`) WHERE (ID(previous) IN {ID_previous}) OPTIONAL MATCH previous&lt;-[rel1:`HAS_CATEGORY`]-(next:`Category`) RETURN ID(previous), collect(next) | {:ID_previous=&gt;[2, 5, 9, 10]}
+
+  Rendered books/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 110ms (Views: 109.2ms)</code></pre>
+</div>
+</div>
+
+
+<div class="paragraph">
+<p>If you find that a bit hard to read then you can add the following line to your application&#8217;s configuration:</p>
+</div>
+
+<div class="listingblock">
+<div class="title">config/application.rb</div>
+<div class="content code-panel" style="width: 100%; height: auto; border: medium 1px;">
+<pre style="font-size: 16px; font-weight: 100;"  class="code programlisting cm-s-neo" data-lang="ruby"><code>config.neo4j.pretty_logged_cypher_queries = true</code></pre>
+</div>
+</div>
+
+
+<div class="paragraph">
+<p>Don&#8217;t forget to restart your Rails server!</p>
+</div>
+
+
+
+<div class="paragraph">
+<p>Once you done this your log will look more like this:</p>
+</div>
+
+<div class="listingblock">
+<div class="title">log/development.log</div>
+<div class="content code-panel" style="width: 100%; height: auto; border: medium 1px;">
+<pre style="font-size: 16px; font-weight: 100;"  class="code programlisting cm-s-neo" data-lang="log"><code>Started GET "/books" for ::1 at 2015-09-30 17:37:34 +1300
+Processing by BooksController#index as HTML
+ CYPHER 9ms
+  MATCH (n:`Book`:`Asset`)
+  RETURN n
+
+ Book#author 5ms
+  MATCH (previous:`Book`:`Asset`)
+  WHERE (ID(previous) IN {ID_previous})
+  OPTIONAL MATCH previous&lt;-[rel1:`CREATED`]-(next:`User`)
+  RETURN
+    ID(previous),
+    collect(next) | {:ID_previous=&gt;[2, 5, 9, 10]}
+
+ Book#category 4ms
+  MATCH (previous:`Book`:`Asset`)
+  WHERE (ID(previous) IN {ID_previous})
+  OPTIONAL MATCH previous&lt;-[rel1:`HAS_CATEGORY`]-(next:`Category`)
+  RETURN
+    ID(previous),
+    collect(next) | {:ID_previous=&gt;[2, 5, 9, 10]}
+  Rendered books/index.html.erb within layouts/application (24.2ms)
+Completed 200 OK in 147ms (Views: 146.0ms)</code></pre>
+</div>
+</div>
+
+
+<div class="paragraph">
+<p>First the books are loaded and then separate queries are made to get all of the authors and categories for those books.</p>
+</div>
+
+
+
+<div class="paragraph">
+<p>With <code>ActiveRecord</code> you would need to specify an <code>includes</code> in order to make this happen rather than having each entity loaded individually.
+<code>ActiveNode</code>, on the other hand, makes the assumption that if you refer to an association from a list of items, you&#8217;re almost certainly going to want that association for all of the objects.</p>
+</div>
+
+
+
+<div class="paragraph">
+<p>But we can do better!  Now modify the <code>index</code> action of the <code>BooksController</code> like so:</p>
+</div>
+
+<div class="listingblock">
+<div class="title">app/controllers/books_controller.rb</div>
+<div class="content code-panel" style="width: 100%; height: auto; border: medium 1px;">
+<pre style="font-size: 16px; font-weight: 100;"  class="code programlisting cm-s-neo" data-lang="ruby"><code>def index
+  @books = Book.all.with_associations(:author, :category)
+end</code></pre>
+</div>
+</div>
+
+
+<div class="paragraph">
+<p>The <code>with_associations</code> method is similar to <code>includes</code>, except that our associations are loaded <strong><em>in the same query</em></strong> using the <code>collect()</code> function demonstrated earlier.</p>
+</div>
+
+<div class="listingblock">
+<div class="title">log/development.log</div>
+<div class="content code-panel" style="width: 100%; height: auto; border: medium 1px;">
+<pre style="font-size: 16px; font-weight: 100;"  class="code programlisting cm-s-neo" data-lang="log"><code>Started GET "/books" for ::1 at 2015-09-30 17:54:25 +1300
+Processing by BooksController#index as HTML
+ CYPHER 9ms
+  MATCH (n:`Book`:`Asset`)
+  OPTIONAL MATCH
+    n&lt;-[:`CREATED`]-author,
+    n&lt;-[:`HAS_CATEGORY`]-category
+  WHERE
+    (author:User) AND
+    (category:Category)
+  RETURN
+    n,
+    [collect(author),collect(category)]
+  Rendered books/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 62ms (Views: 61.5ms)</code></pre>
+</div>
+</div>
+
+
+<div class="paragraph">
+<p>What we get is a list of <code>Book</code> objects which are pre-populated with authors and categories.</p>
+</div>
+
+</div>
+<div  id="_recommendations" class="sect3 "  >
+<h4>Recommendations</h4>
+
+
+<div class="paragraph">
+<p>You may have heard that Neo4j makes building recommendations from your data easy.  Let&#8217;s take a look at how we might make some recommendations.  For this we&#8217;re going to introduce <code>has_many</code> associations.  Since entities are connected via relationships in Neo4j the database doesn&#8217;t draw any distinction for when we want to have a single relationship or many to/from a node.  In our Ruby apps, however, it is often convenient to be able to draw this distinction.</p>
+</div>
+
+
+
+<div class="paragraph">
+<p>To learn more about associations check out this short screencast.</p>
+</div>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/veqIfIqtoNc?rel=0" frameborder="0" allowfullscreen></iframe>
+
+
+<div class="paragraph">
+<p>First change the <code>category</code> association for the <code>Book</code> model:</p>
+</div>
+
+<div class="listingblock">
+<div class="title">app/models/book.rb</div>
+<div class="content code-panel" style="width: 100%; height: auto; border: medium 1px;">
+<pre style="font-size: 16px; font-weight: 100;"  class="code programlisting cm-s-neo" data-lang="ruby"><code>has_many :out, :categories, type: :HAS_CATEGORY</code></pre>
+</div>
+</div>
+
+
+<div class="paragraph">
+<p>Then add a <code>books</code> association to the <code>Category</code> model:</p>
+</div>
+
+<div class="listingblock">
+<div class="title">app/models/category.rb</div>
+<div class="content code-panel" style="width: 100%; height: auto; border: medium 1px;">
+<pre style="font-size: 16px; font-weight: 100;"  class="code programlisting cm-s-neo" data-lang="ruby"><code>has_many :in, :books, origin: :categories</code></pre>
+</div>
+</div>
+
+
+<div class="paragraph">
+<p>Since we&#8217;ve changed the <code>has_one</code> to <code>has_many</code> for the book categories we should update our scaffold UI to match:</p>
+</div>
+
+<div class="listingblock">
+<div class="title">app/controllers/books_controller.rb</div>
+<div class="content code-panel" style="width: 100%; height: auto; border: medium 1px;">
+<pre style="font-size: 16px; font-weight: 100;"  class="code programlisting cm-s-neo" data-lang="ruby"><code>def index
+  @books = Book.all.with_associations(:author, :categories)
+end
+
+... Further down ...
+
+def book_params
+  params.require(:book).permit(:isbn, :title, :year_published, :author, :category_ids =&gt; [])
+end</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">app/views/books/index.html.erb</div>
+<div class="content code-panel" style="width: 100%; height: auto; border: medium 1px;">
+<pre style="font-size: 16px; font-weight: 100;"  class="code programlisting cm-s-neo" data-lang="erb"><code>&lt;th&gt;Categories&lt;/th&gt;
+
+... Further down ...
+
+&lt;td&gt;
+  &lt;ul&gt;
+  &lt;% book.categories.each do |category| %&gt;
+    &lt;li&gt;&lt;%= link_to category.name, category %&gt;&lt;/li&gt;
+  &lt;% end %&gt;
+  &lt;/ul&gt;
+&lt;/td&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">app/views/books/_form.html.erb</div>
+<div class="content code-panel" style="width: 100%; height: auto; border: medium 1px;">
+<pre style="font-size: 16px; font-weight: 100;"  class="code programlisting cm-s-neo" data-lang="erb"><code>&lt;div class="field"&gt;
+  &lt;%= f.label :categories %&gt;&lt;br&gt;
+  &lt;%= f.select :category_ids, options_from_collection_for_select(Category.order(:name), :id, :name, @book.categories.map(&amp;:id)), {include_blank: true}, {multiple: true, size: 5} %&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">app/views/books/show.html.erb</div>
+<div class="content code-panel" style="width: 100%; height: auto; border: medium 1px;">
+<pre style="font-size: 16px; font-weight: 100;"  class="code programlisting cm-s-neo" data-lang="erb"><code>&lt;p&gt;
+  &lt;strong&gt;Categories:&lt;/strong&gt;
+  &lt;%= @book.categories.map(&amp;:name).to_sentence %&gt;
+&lt;/p&gt;</code></pre>
+</div>
+</div>
+
+
+<div class="paragraph">
+<p>Whew!</p>
+</div>
+
+
+
+<div class="paragraph">
+<p>Now with the ability for a book to have many categories and for a category to have many books you can have a much better picture about recommending books.</p>
+</div>
+
+
+
+<div class="paragraph">
+<p>It is simple to get a start on querying potential recommendations.  Try running this in your Rails console:</p>
+</div>
+
+<div class="listingblock">
+<div class="content code-panel" style="width: 100%; height: auto; border: medium 1px;">
+<pre style="font-size: 16px; font-weight: 100;"  class="code programlisting cm-s-neo" data-lang="ruby"><code>Book.all.categories.books.to_a</code></pre>
+</div>
+</div>
+
+
+<div class="paragraph">
+<p>It should show you the query which was made and it should look something like:</p>
+</div>
+
+<div class="listingblock">
+<div class="content code-panel" style="width: 100%; height: auto; border: medium 1px;">
+<pre style="font-size: 16px; font-weight: 100;"  class="code programlisting cm-s-neo" data-lang="cypher"><code>MATCH (n:`Book`:`Asset`)
+MATCH n-[rel1:`HAS_CATEGORY`]-&gt;(node3:`Category`)
+MATCH node3&lt;-[rel2:`HAS_CATEGORY`]-(result_books:`Book`:`Asset`)
+RETURN result_books</code></pre>
+</div>
+</div>
+
+
+<div class="paragraph">
+<p>This query is finding all of the books that share categories with all other books.  This isn&#8217;t particularly useful until we start introducing some variables.  In the <code>neo4j</code> gem this is called <em>association chaining</em>.  For more information about association chaining check out this short screencast:</p>
+</div>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pUAl9ov22j4?rel=0" frameborder="0" allowfullscreen></iframe>
+
+
+<div class="paragraph">
+<p>What if you wanted to list every book and find out, for every other book with which it shares a category, how many categories it shares?</p>
+</div>
+
+<div class="listingblock">
+<div class="content code-panel" style="width: 100%; height: auto; border: medium 1px;">
+<pre style="font-size: 16px; font-weight: 100;"  class="code programlisting cm-s-neo" data-lang="ruby"><code>Book.as(:book).
+  categories(:category).
+  books(:other_book).
+  pluck('book', 'other_book', 'count(category)')</code></pre>
+</div>
+</div>
+
+
+<div class="paragraph">
+<p>Notice how we&#8217;re starting to assign variables.  These eventually become the variables in the cypher query made to Neo4j.</p>
+</div>
+
+
+
+<div class="paragraph">
+<p>Taking it a step further, let&#8217;s create a query which finds, for all books, the books which share at least two categories.  We can also display these recommendations in our app like so:</p>
+</div>
+
+<div class="listingblock">
+<div class="title">app/controllers/books_controller.rb</div>
+<div class="content code-panel" style="width: 100%; height: auto; border: medium 1px;">
+<pre style="font-size: 16px; font-weight: 100;"  class="code programlisting cm-s-neo" data-lang="ruby"><code>@recommendations = Book.as(:book).
+                    categories(:category).
+                    books(:other_book).
+                    where('book &lt;&gt; other_book').
+                    query.
+                    with('book, other_book, count(category) AS count').
+                    where('count &gt; 1').
+                    pluck('book.isbn', 'collect(other_book)')
+@recommendations = Hash[*@recommendations.flatten(1)]</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">app/views/books/index.html.erb</div>
+<div class="content code-panel" style="width: 100%; height: auto; border: medium 1px;">
+<pre style="font-size: 16px; font-weight: 100;"  class="code programlisting cm-s-neo" data-lang="erb"><code>&lt;th&gt;Recommendations&lt;/th&gt;
+
+... Further down ...
+
+&lt;td&gt;&lt;%= (@recommendations[book.isbn] || []).map(&amp;:title).to_sentence %&gt;&lt;/td&gt;</code></pre>
+</div>
+</div>
+
+
+<div class="paragraph">
+<p>Of course we don&#8217;t want to put too much logic in the controller, so let&#8217;s extract this to a model class method:</p>
+</div>
+
+<div class="listingblock">
+<div class="title">app/controllers/books_controller.rb</div>
+<div class="content code-panel" style="width: 100%; height: auto; border: medium 1px;">
+<pre style="font-size: 16px; font-weight: 100;"  class="code programlisting cm-s-neo" data-lang="ruby"><code>Book.recommendations</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">app/controllers/books_controller.rb</div>
+<div class="content code-panel" style="width: 100%; height: auto; border: medium 1px;">
+<pre style="font-size: 16px; font-weight: 100;"  class="code programlisting cm-s-neo" data-lang="ruby"><code>def self.recommendations
+  recommendations = all(:book).
+                      categories(:category).
+                      books(:other_book).
+                      where('book &lt;&gt; other_book').
+                      query.
+                      with('book, other_book, count(category) AS count').
+                      where('count &gt; 1').
+                      pluck('book.isbn', 'collect(other_book)')
+
+  Hash[*recommendations.flatten(1)]
+end</code></pre>
+</div>
+</div>
+
+
+<div class="paragraph">
+<p>Because the <code>all</code> method starts it off we can actually add this to an existing chain rather than just calling it on the <code>Book</code> model.  For example if we had a <code>recent</code> scope which only gave us books from the past ten years:</p>
+</div>
+
+<div class="listingblock">
+<div class="content code-panel" style="width: 100%; height: auto; border: medium 1px;">
+<pre style="font-size: 16px; font-weight: 100;"  class="code programlisting cm-s-neo" data-lang="ruby"><code>Book.recent.recommendations</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div  id="_doing_more" class="sect2 columns medium-12" style='padding-left: 0;' >
+<h3>Doing More</h3>
+
+
+<div class="paragraph">
+<p>Are you getting into the idea of using Neo4j?  Great!  There are a number of resources to help you along with your journey.</p>
+</div>
+
+<div  id="_an_example_sinatra_application" class="sect3 "  >
+<h4>An example Sinatra application</h4>
+<div class="listingblock">
+<div class="title">app.rb</div>
+<div class="content code-panel" style="width: 100%; height: auto; border: medium 1px;">
+<pre style="font-size: 16px; font-weight: 100;"  class="code programlisting cm-s-neo" data-lang="ruby"><code>require 'sinatra'
+require 'neo4j'
+
+neo4j_url = ENV['NEO4J_URL'] || 'http://localhost:7474'
+neo4j_username = ENV['NEO4J_USERNAME']
+neo4j_password = ENV['NEO4J_PASSWORD']
+
+Neo4j::Session.open(:server_db, neo4j_url, basic_auth: {username: neo4j_username, password: neo4j_password})
+
+class Asset
+  include Neo4j::ActiveNode
+  property :title, type: String
+end
+
+class Book &lt; Asset
+  id_property :isbn
+  property :year_published, type: Integer
+
+  has_one :in, :author, type: :CREATED, model_class: :User
+  has_many :out, :categories, type: :HAS_CATEGORY
+
+  def self.recommendations
+    recommendations = all(:book).
+                        categories(:category).
+                        books(:other_book).
+                        where('book &lt;&gt; other_book').
+                        query.
+                        with('book, other_book, count(category) AS count').
+                        where('count &gt; 1').
+                        pluck('book.isbn', 'collect(other_book)')
+
+    Hash[*recommendations.flatten(1)]
+  end
+end
+
+get '/books' do
+  @books = Book.all.with_associations(:author, :categories)
+
+  @recommendations = Book.recommendations
+
+  erb :books_index
+end</code></pre>
+</div>
+</div>
+
+
+<div class="paragraph">
+<p>For the example view see the one from <a href="https://github.com/neo4j-examples/neo4jrb_guide_asset_portal/blob/master/app/views/books/index.html.erb">the result</a> of the Rails example above.</p>
+</div>
+
+
+
+<div class="paragraph">
+<p>You can also view example Sintra example applications for the <a href="https://github.com/neo4j-examples/movies-ruby-neo4j-core">neo4j-core</a> and <a href="https://github.com/neo4j-examples/movies-ruby-neo4jrb">neo4j</a> gems.</p>
+</div>
+
+</div>
+<div  id="_the_asset_portal_application" class="sect3 "  >
+<h4>The asset_portal application</h4>
+
+
+<div class="paragraph">
+<p>You can find the result of this guide in it&#8217;s <a href="https://github.com/neo4j-examples/neo4jrb_guide_asset_portal">GitHub repository</a>.  If you would like to play with a more developed application check out our <a href="https://github.com/neo4j-examples/asset_portal">asset_portal</a> app.  The project introduces a single <code>AssetController</code> to avoid the duplication from this guide and also uses other tools like <a href="http://semantic-ui.com/">Semantic UI</a> for a cleaner interface.</p>
+</div>
+
+</div>
+<div  id="_getting_help" class="sect3 "  >
+<h4>Getting Help</h4>
+
+
+<div class="paragraph">
+<p>The maintainers of the <code>Neo4j.rb</code> project love to help!  You can ask a question on <a href="http://stackoverflow.com/questions/ask?tags=neo4j.rb+neo4j+ruby">StackOverflow</a> (make sure to use the <code>neo4j.rb</code> tag), or join us in our <a href="https://gitter.im/neo4jrb/neo4j">Gitter chat room</a>.  You can also check out the <a href="http://neo4jrb.io/">website</a> and the <a href="http://neo4jrb.readthedocs.org/">documentation</a>.</p>
+</div>
+
+
+
+<div class="paragraph">
+<p>There is also a wonderful <a href="http://neo4j.com/blog/public-neo4j-users-slack-group/">public Slack group</a> for the wider Neo4j community if you have questions about installation, configuration, Cypher, etc&#8230;&#8203;</p>
+</div>
+
+</div>
+<div  id="_more_screencasts" class="sect3 "  >
+<h4>More Screencasts</h4>
+
+
+<div class="paragraph">
+<p>In addition to the screencasts embedded in this guide there are two others to help you learn more about the <code>Neo4j.rb</code> project:</p>
+</div>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/f7NNGIWZ1pE?rel=0" frameborder="0" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UFiWqPdH7io?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+<div  id="_integrations_with_other_gems" class="sect3 "  >
+<h4>Integrations with other gems</h4>
+
+
+<div class="paragraph">
+<p>Unresolved directive in ruby-course.adoc - include::../ruby.adoc[tags=neo4jrb-integrations]</p>
+</div>
+
+</div>
+</div>
+                    </div>
+                    <div class="large-3 large-pull-9 columns">
+                           <ul style="padding-top: 0;" class="side-nav">
+         <dl class="accordion">
+            <dd class="accordion-navigation inactive">
+               <a href="/developer-resources/get-started/">
+                  <h5>Get Started</h5>
+               </a>
+               <div class="content inactive" id="panel1">
+                  <ul>
+                     <li><a href="/developer-resources/get-started/graph-database/">What is a GraphDB?</a></li>
+                     <li><a href="/developer-resources/get-started/graph-db-vs-rdbms/">GraphDB vs RDBMS</a></li>
+                     <li><a href="/developer-resources/get-started/graph-db-vs-nosql/">GraphDB vs NOSQL</a></li>
+                     <li><a href="/developer-resources/get-started/guide-neo4j-browser/">Neo4j Browser Intro</a></li>
+                     <li><a href="/graphacademy/online-course-getting-started/">Getting Started Course</a></li>
+                     <!--<li><a href="/developer-resources/language-guides/">Language Drivers</a></li>-->
+                  </ul>
+               </div>
+            </dd>
+         </dl>
+            <dl class="accordion">
+               <dd class="accordion-navigation inactive">
+                  <a href="/developer-resources/cypher/">
+                     <h5>Cypher Query Language</h5>
+                  </a>
+                  <div class="content inactive" id="panel2">
+                     <ul>
+                        <li><a href="/developer-resources/cypher/cypher-query-language/">Cypher Intro</a></li>
+                        <li><a href="/developer-resources/cypher/guide-sql-to-cypher/">From SQL to Cypher</a></li>
+                        <li><a href="/developer-resources/cypher/guide-build-a-recommendation-engine/">Build a Recommendation Engine</a></li>
+                        <li><a href="/graphacademy/online-course-getting-started/">Getting Started Course</a></li>
+                        <li><a href="/docs/stable/cypher-refcard/">Cypher Refcard</a></li>
+                     </ul>
+                  </div>
+               </dd>
+            </dl>
+            <dl class="accordion">
+               <dd class="accordion-navigation inactive">
+                  <a href="/developer-resources/data-modeling/">
+                     <h5>Data Modeling</h5>
+                  </a>
+                  <div class="content inactive" id="panel3">
+                     <ul>
+                        <li><a href="/developer-resources/data-modeling/guide-data-modeling/">Graph Data Modeling Guidelines</a></li>
+                        <li><a href="/developer-resources/data-modeling/graphgist/">Interactive Graph Models - GraphGist</a></li>
+                     </ul>
+                  </div>
+               </dd>
+            </dl>
+            <dl class="accordion">
+               <dd class="accordion-navigation inactive">
+                  <a href="/developer-resources/working-with-data/">
+                     <h5>Working with Data</h5>
+                  </a>
+                  <div class="content inactive" id="panel4">
+                     <ul>
+                        <li><a href="/developer-resources/working-with-data/guide-data-visualization/">Graph Visualization for Neo4j</a></li>
+                        <li><a href="/developer-resources/working-with-data/guide-importing-data-and-etl/">Importing Data into Neo4j</a></li>
+                        <li><a href="/developer-resources/working-with-data/guide-import-csv/">Importing CSV</a></li>
+                        <li><a href="/developer-resources/working-with-data/example-data/">Example Datasets</a></li>
+                     </ul>
+                  </div>
+               </dd>
+            </dl>
+            <dl class="accordion">
+               <dd class="accordion-navigation inactive">
+                  <a href="/developer-resources/language-guides/">
+                     <h5>Drivers &amp; Language Guides</h5>
+                  </a>
+                  <div class="content inactive" id="panel5">
+                     <ul>
+                        <li><a href="/developer-resources/language-guides/java/">Java</a></li>
+                        <li><a href="/developer-resources/language-guides/spring-data-neo4j/">Spring Framework</a></li>
+                        <li><a href="/developer-resources/language-guides/dotnet/">.NET</a></li>
+                        <li><a href="/developer-resources/language-guides/javascript/">JavaScript</a></li>
+                        <li><a href="/developer-resources/language-guides/python/">Python</a></li>
+                        <li><a href="/developer-resources/language-guides/ruby/">Ruby</a></li>
+                        <li><a href="/developer-resources/language-guides/php/">PHP</a></li>
+                        <li><a href="/developer-resources/language-guides/">All Neo4j Drivers</a></li>
+                     </ul>
+                  </div>
+               </dd>
+            </dl>
+            <dl class="accordion">
+               <dd class="accordion-navigation ">
+                  <a href="/developer-resources/integration/">
+                     <h5>Neo4j Tools &amp; Integrations</h5>
+                  </a>
+                  <div class="content " id="panel6">
+                     <ul>
+                        <li><a href="/developer-resources/integration/ecosystem/">Tools &amp; Libs for Neo4j</a></li>
+                        <li><a href="/developer-resources/integration/apache-spark/">Apache Spark</a></li>
+                        <li><a href="/developer-resources/integration/elastic-search/">Elastic-Search</a></li>
+                        <li><a href="/developer-resources/integration/mongodb/">MongoDB</a></li>
+                        <!--li><a href="/developer-resources/integration/apache-hadoop/">Hadoop</a></li-->
+                        <li><a href="/developer-resources/integration/docker/">Docker</a></li>
+                        <!--li><a href="/developer-resources/integration/meteor/">Integration with Meteor.js</a></li-->
+                     </ul>
+                  </div>
+               </dd>
+            </dl>
+            <dl class="accordion">
+               <dd class="accordion-navigation inactive">
+                  <a href="/developer-resources/in-production/">
+                     <h5>Neo4j In Production</h5>
+                  </a>
+                  <div class="content inactive" id="panel7">
+                     <ul>
+                        <li><a href="/developer-resources/in-production/guide-cloud-deployment/">Guide: Cloud Deployment</a></li>
+                        <li><a href="/developer-resources/in-production/guide-sizing-and-hardware-calculator/">Sizing + Hardware Calculator</a></li>
+                        <li><a href="/developer-resources/in-production/guide-performance-tuning/">Performance Tuning</a></li>
+                        <li><a href="/developer-resources/in-production/guide-clustering-neo4j/">Clustering Neo4j </a></li>
+	                    <li><a href="/graphacademy/online-course-prod/">In Production Course</a></li>
+                     </ul>
+                  </div>
+               </dd>
+            </dl>
+         <dl class="accordion">
+            <dd class="accordion-navigation active">
+               <a href="/developer-resources/resources/">
+                  <h5>Documentation &amp; Resources</h5>
+               </a>
+               <div class="content active" id="panel4">
+                  <ul>
+	                 <li><a href="/graphacademy/online-course-getting-started/">Getting Started Course</a></li>
+	                 <li><a href="/developer-resources/resources/ruby-course/">Ruby / Rails Course</a></li>
+	                 <li><a href="/graphacademy/online-course-prod/">In Production Course</a></li>
+	                 <li><a href="/docs/stable/">Reference Manual</a></li>
+	                 <ul>
+	                 <li><a href="/docs/stable/introduction.html">Introduction</a></li>
+	                 <li><a href="/docs/stable/tutorials.html">Tutorials</a></li>
+	                 <li><a href="/docs/stable/cypher-query-lang.html">Cypher Query Language</a></li>
+	                 <li><a href="/docs/stable/operations.html">Operations</a></li>
+	                 <li><a href="/docs/stable/tools.html">Tools</a></li>
+	                 <li><a href="/docs/stable/advanced-usage.html">Advanced Usage</a></li>
+	                 </ul>
+                     <li><a href="/docs/stable/cypher-refcard/">Cypher Refcard</a></li>
+	                 <li><a href="/docs/milestone/">Manual - Milestone</a></li>
+                     <li><a href="/docs/">Older Documentation</a></li>
+                  </ul>
+               </div>
+            </dd>
+         </dl>
+         <dl class="accordion">
+            <dd class="accordion-navigation ">
+               <a href="/developer-resources/contribute/">
+                  <h5>Contributing to Neo4j</h5>
+               </a>
+               <div class="content " id="panel8">
+                  <ul>
+	                    <!-- todo CLA, SO, GitHub, Building, Tools -->
+                     <!--li><a href="/developer-resources/contribution/xxx">Contributing</a></li-->
+                  </ul>
+               </div>
+            </dd>
+         </dl>
+         </ul>
+         <div class="accordion-navigation">
+<div style="text-align:center">
+<div><a href="http://twitter.com/neo4j" target="_blank"> <img style="width:33%" src="http://dev.assets.neo4j.com.s3.amazonaws.com/wp-content/uploads/twitter.png"/><br/>Follow us on Twitter</a></div>
+<div><a href="http://neo4j.com/slack" target="_blank"><img style="width:33%" src="http://dev.assets.neo4j.com.s3.amazonaws.com/wp-content/uploads/slack_icon.png"/><br/>Chat on Slack</a></div>
+<div><a href="https://github.com/neo4j/neo4j" target="_blank"><img style="width:33%" src="http://neo4j.com/wp-content/themes/neo4jweb/assets/images/github.png"/><br/>Engage on GitHub</a></div>
+<div><a href="http://stackoverflow.com/questions/tagged/neo4j"  target="_blank"><img style="width:33%" src="http://neo4j.com/wp-content/themes/neo4jweb/assets/images/stackoverflow.png"/><br/>Ask on StackOverflow</a></div>
+<div><a href="https://groups.google.com/forum/#!forum/neo4j"><img style="width:33%" src="http://neo4j.com/wp-content/themes/neo4jweb/assets/images/googlegroups.png"/><br/>Discuss in our Google Group </a></div>
+         </div>
+         </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="row text-center hide-for-small hr-style">
+        <div class="medium-5 columns">
+            <hr>
+        </div>
+        <div class="medium-2 columns">
+            <object height="100%" width="100%"
+                    data="http://neo4j.com/wp-content/themes/neo4jweb/assets/images/hr-image.svg"
+                    type="image/svg+xml"></object>
+        </div>
+        <div class="medium-5 columns">
+            <hr>
+        </div>
+    </div>
+    <div class="row text-center show-for-small">
+        <div class="medium-12 columns">
+            <hr>
+        </div>
+    </div>
+    <section class="row">
+        <div class="medium-4 columns"></div>
+    </section>
+    <section class="row">
+        <div class="small-12 columns"></div>
+    </section>
+</article>
+<div class="calloutsection">
+    <div class="row">
+        <div class="medium-8 small-centered columns text-center">
+            <h3>Stay Connected</h3>
+
+            <p>Sign up to find out more about Neo4j's upcoming events &amp; meetups.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="medium-6 small-centered columns">
+            <div class="row collapse">
+                <div class="small-8 columns">
+                    <script src="//app-sjl.marketo.com/js/forms2/js/forms2.js"></script>
+                    <form id="mktoForm_519"></form>
+                    <script>MktoForms2.loadForm("//app-sjl.marketo.com", "773-GON-065", 519);</script>
+                </div>
+                <div class="small-4 columns"><a href="#" id="signupbody" class="button postfix">Keep Me
+                    Connected &rsaquo;</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<style> #mktoForm_519 button {
+    display: none;
+} </style>
+<script>
+    var btn = document.getElementById("signupbody");
+    btn.onclick = function () {
+        MktoForms2.getForm(519).submit();
+    };
+</script>
+<div class="row text-center hide-for-small hr-style">
+    <div class="medium-5 columns">
+        <hr>
+    </div>
+    <div class="medium-2 columns">
+        <object height="100%" width="100%" data="http://neo4j.com/wp-content/themes/neo4jweb/assets/images/hr-image.svg"
+                type="image/svg+xml"></object>
+    </div>
+    <div class="medium-5 columns">
+        <hr>
+    </div>
+</div>
+<div class="row text-center show-for-small">
+    <div class="medium-12 columns">
+        <hr>
+    </div>
+</div>
+<footer id="footer">
+    <div class="row">
+        <div class="footer-widgets">
+            <div class="small-6 medium-3 columns">
+                <div>
+                    <div class="menu-product-and-services-container">
+                        <ul id="menu-product-and-services-1" class="menu">
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36967"><a
+                                    href="/product">PRODUCT AND SERVICES</a></li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36966"><a
+                                    href="http://neo4j.com/product">Neo4j Graph Database</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38756"><a
+                                    href="http://neo4j.com/subscriptions/">Subscriptions</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36971"><a
+                                    href="http://neo4j.com/neo4j-editions/">Compare Neo4j Editions</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36974"><a
+                                    href="http://neo4j.com/professional-services/">Professional Services</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38293"><a
+                                    href="http://neo4j.com/open-source-project/">Open Source Project</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="menu-partners-container">
+                        <ul id="menu-partners-1" class="menu">
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36965"><a
+                                    href="http://neo4j.com/partners/">PARTNER PROGRAM</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36963"><a
+                                    href="http://neo4j.com/neo4j-partner-program/">Become a Partner</a></li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-38558"><a
+                                    href="/partners/#find">Find a Partner</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="small-6 medium-3 columns">
+                <div>
+                    <div class="menu-customers-container">
+                        <ul id="menu-customers-1" class="menu">
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36955"><a
+                                    href="http://neo4j.com/customers/">CUSTOMERS</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="menu-use-cases-container">
+                        <ul id="menu-use-cases-1" class="menu">
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38559"><a
+                                    href="http://neo4j.com/use-cases/">USE CASES</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-use_case menu-item-38548"><a
+                                    href="http://neo4j.com/use-cases/network-and-data-center-management/">Network &#038;
+                                IT Operations Mgmt</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-use_case menu-item-38551"><a
+                                    href="http://neo4j.com/use-cases/master-data-management/">Master Data Management</a>
+                            </li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-use_case menu-item-38552"><a
+                                    href="http://neo4j.com/use-cases/recommendations/">Recommendations</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-use_case menu-item-38550"><a
+                                    href="http://neo4j.com/use-cases/social/">Social Network</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-use_case menu-item-38547"><a
+                                    href="http://neo4j.com/use-cases/identity-and-access-management/">Identity and
+                                Access Mgmt</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-use_case menu-item-38549"><a
+                                    href="http://neo4j.com/use-cases/digital-asset-management/">Digital Asset
+                                Management</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="menu-graphacademy-container">
+                        <ul id="menu-graphacademy-1" class="menu">
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36957"><a
+                                    href="http://neo4j.com/graphacademy/">GRAPHACADEMY</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36959"><a
+                                    href="http://neo4j.com/graphacademy/online-course/">Online Training</a></li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-39349"><a
+                                    href="/books/">Books</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38761"><a
+                                    href="http://neo4j.com/resources/">Resources</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="small-6 medium-3 columns">
+                <div>
+                    <div class="menu-developer-container">
+                        <ul id="menu-developer-1" class="menu">
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-38292">
+                                <a href="/developer-resources/get-started">DEVELOPER</a></li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-39699"><a
+                                    href="/docs">Docs</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="menu-community-4-container">
+                        <ul id="menu-community-5" class="menu">
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38291"><a
+                                    href="http://neo4j.com/community/">COMMUNITY</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="menu-neo4j-blog-container">
+                        <ul id="menu-neo4j-blog-1" class="menu">
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-38289">
+                                <a href="http://neo4j.com/blog/">Neo4j Blog</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="menu-events-container">
+                        <ul id="menu-events-1" class="menu">
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36956"><a
+                                    href="http://neo4j.com/events/">EVENTS</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="menu-about-us-container">
+                        <ul id="menu-about-us-1" class="menu">
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38561"><a
+                                    href="http://neo4j.com/company/">COMPANY</a></li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36950"><a
+                                    href="http://neo4j.com/news">News</a></li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36951"><a
+                                    href="http://neo4j.com/jobs">Jobs</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38563"><a
+                                    href="http://neo4j.com/staff/">Staff</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38288"><a
+                                    href="http://neo4j.com/contact-us/">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="small-6 medium-3 columns">
+                <div>
+                    <div class="textwidget">
+                        <h5><a href="/contact-us">Contact Us &rarr;</a></h5>
+
+                        <p>1-855-636-4532 <a href="mailto:info@neotechnology.com">US <i class="fi-mail"></i></a><br/>
+                            +44 808 189 0493 <a href="mailto:uk@neotechnology.com">UK <i class="fi-mail"></i></a><br/>
+                            +49 800 723 6231 <a href="mailto:vertrieb@neotechnology.com">Germany <i class="fi-mail"></i></a><br/>
+                            +33 (0)8 05 08 03 44 <a href="mailto:ventes@neotechnology.com">France <i
+                                    class="fi-mail"></i></a></p>
+                        <h5>Get Neo4j News</h5>
+
+                        <p>Keep up with the latest graph database trends, tips &amp; events.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="textwidget">
+                        <div class="row collapse">
+                            <div class="small-9 columns">
+                                <script src="//app-sjl.marketo.com/js/forms2/js/forms2.js"></script>
+                                <form id="mktoForm_477"></form>
+                                <script>
+                                    MktoForms2.loadForm("//app-sjl.marketo.com", "773-GON-065", 477, function (form) {
+                                        form.onSuccess(function (values, followUpUrl) {
+                                            document.getElementById("signup").style.display = "none";
+                                            document.getElementById('thks-footer').innerHTML = "<p>Thank you! Email Node added.</p> ";
+                                            ga('send', 'event', 'subscribe', 'submitted', 'footer-subscribe');
+                                            form.getFormElem().hide();
+                                            return false;
+                                        });
+                                    });
+                                </script>
+                            </div>
+                            <div class="small-3 columns" style="border:none;"><a href="#footer" id="signup"
+                                                                                 class="button small postfix">Go</a>
+                            </div>
+                            <div id="thks-footer">&nbsp;</div>
+                        </div>
+                        <style> #mktoForm_477 button {
+                            display: none;
+                        }
+
+                        #mktoForm_477 {
+                            margin-left: -20px;
+                        } </style>
+                        <script>
+                            var btn = document.getElementById("signup");
+                            btn.onclick = function () {
+                                MktoForms2.getForm(477).submit();
+                            };
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row collapse copyright">
+        <div class="small-12 columns text-center">
+            <div class="logo-footer"><img
+                    src="http://neo4j.com/wp-content/themes/neo4jweb/assets/images/neo4j-logo-2015.png"/></div>
+            <p class="copyright-text">&copy; 2015 Neo Technology, Inc.</a></p>
+
+            <div class="community-text">
+                <p><span class="link-color">(<a href="/terms/">Terms</a>) - (<a href="/privacy-policy/">Privacy
+                    Policy</a>) </span></p>
+            </div>
+        </div>
+    </div>
+</footer>
+<a class="exit-off-canvas"></a> </div> </div>
+<script src="http://munchkin.marketo.net/munchkin.js" type="text/javascript"></script>
+<script type="text/javascript">mktoMunchkin("773-GON-065");</script>
+<script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/d3/3.4.2/d3.min.js?ver=4.1'></script>
+<script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/json3/3.3.0/json3.min.js?ver=4.1'></script>
+<script type='text/javascript' src='http://neo4j.com/wp-content/themes/neo4jweb/assets/js/neo_d3.js?ver=4.1'></script>
+<script>
+    jQuery(document).foundation({
+        tab: {
+            callback: function (tab) {
+                $(window).trigger('resize');
+            }
+        }
+    });
+</script>
+<script src="http://neo4j.com/wp-content/themes/neo4jweb/assets/js/foundation/foundation.equalizer.js"></script>
+
+</body>
+</html>
